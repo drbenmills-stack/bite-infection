@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Is My Bite Infected? (v8)</title>
+   <style>
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 { font-size: 1.6rem; margin: 0 0 0.1rem; }
+h1 .version {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #0b5394;
+  background: #eef3fa;
+  border: 1px solid #cfe0f2;
+  border-radius: 0.3rem;
+  padding: 0 0.35rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+h2 { font-size: 1.25rem; margin-top: 2rem; border-bottom: 2px solid #0b5394; padding-bottom: 0.25rem; }
+h3 { font-size: 1.05rem; margin-top: 1.5rem; color: #0b5394; }
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0.1rem 0 0.15rem;
+  font-weight: 400;
+}
+
+.byline {
+  font-size: 0.8rem;
+  color: #9a9a9a;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  margin: 0 0 1.25rem;
+}
+
+.disclaimer {
+  font-style: italic;
+  color: #444;
+  background: #f2f6fa;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid #0b5394;
+}
+
+.callout {
+  font-weight: bold;
+  font-style: normal;
+  background: #eefaf0;
+  border-left: 4px solid #2e7d32;
+  padding: 0.75rem 1rem;
+}
+
+.note {
+  background: #fbf3e2;
+  border-left: 4px solid #c8890a;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.note strong { color: #8a5a00; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  vertical-align: top;
+}
+
+th { background-color: #0b5394; color: #ffffff; }
+
+ul { padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+
+.appearances {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 0.75rem;
+}
+
+.appear-card {
+  flex: 1 1 260px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  background: #fafafa;
+}
+
+.appear-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  color: #0b5394;
+}
+
+.appear-card svg { width: 100%; height: auto; max-width: 260px; }
+
+.appear-caption {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+}
+
+.photolinks {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0.5rem 0 1rem;
+}
+
+.photolinks a { color: #0b5394; }
+
+/* Stack the table on narrow screens so nothing is squeezed */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr { display: block; }
+  thead { display: none; }
+  tr { margin-bottom: 1rem; border: 1px solid #ccc; }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 45%;
+   }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0.5rem;
+    width: 40%;
+    font-weight: bold;
+   }
+}
+   </style>
+</head>
+<body>
+   <main>
+     <h1>Is My Bite Infected? <span class="version">v8</span></h1>
+     <p class="subtitle">Some things to think about.</p>
+     <p class="byline">Developed by Dr Ben Mills, Mickleover Medical Centre, Derby.</p>
+     <p class="disclaimer"><em>This page gives general information only. It is not a diagnostic tool and does not assess your specific bite. If you are worried about a bite, contact NHS 111, your GP practice, or go to A&E if you are seriously unwell.</em></p>
+     <p class="callout">Insect bites are annoying, and sometimes very uncomfortable, but very, very rarely are they truly dangerous, particularly in the UK. In fact, the bigger risk in absolute terms is from a severe allergic reaction, anaphylaxis, and if you are reading this, you have already got past the most dangerous period, the minutes after a bite: if you were going to react in an allergic way, you would be unwell by now. What follows explains why infection from a bite is, in fact, also very rare, and why antibiotics are only very, very rarely needed. And although antibiotics are commonly given, this is probably over-treatment, because true infections are, like anaphylaxis, extremely rare, if not more so. This is information to help you decide whether you feel you need to seek further treatment. If in doubt, speak to your healthcare provider, be it 111, your GP practice, or A&amp;E if you are feeling particularly unwell.</p>
+
+     <section>
+       <h2>What usually happens after a bite</h2>
+       <p>Most bites — from mosquitoes, midges, fleas, or other insects — cause a <strong>large local reaction</strong>. This is your immune system reacting to the insect's saliva or venom, not a bacterial infection. It can look alarming: redness, swelling, warmth, and sometimes a lot of itching, occasionally over several centimetres. It is uncomfortable but not dangerous, and it settles on its own, usually within 3 to 10 days.</p>
+       <p>Because a large local reaction looks so similar to a bacterial skin infection (cellulitis) — both cause redness, swelling, warmth, and sometimes pain — the two are very easily confused, by patients and clinicians alike.</p>
+     </section>
+
+     <section>
+       <h2>What cellulitis is — and why it makes you feel unwell</h2>
+       <p>Cellulitis is a bacterial infection of the deeper layers of skin — the dermis and the fat beneath it. Bacteria (usually streptococci or staphylococci) enter through a small break — a bite, scratch, or crack — and multiply in the tissue. Your immune system mounts a full systemic response: inflammatory signals raise your temperature (fever) and make you shivery and generally unwell — the "flu-like" feeling. Red lines running away from the area (lymphangitis) are bacteria and inflammation tracking along the lymph vessels. That is why cellulitis makes the whole body react, not just one patch of skin.</p>
+       <p>A large bite reaction is different. It is your immune system over-reacting to the insect's saliva or venom — not an infection — so there are no bacteria in the tissue and usually no fever and no feeling unwell. A rare exception, "skeeter syndrome," can bring some systemic symptoms from a large release of histamine, but it is not infection and settles on its own.</p>
+     </section>
+
+     <section>
+       <h2>Bite reaction vs cellulitis: how to tell them apart</h2>
+       <table>
+         <caption>Comparison of insect bite reaction and cellulitis</caption>
+         <thead>
+           <tr><th scope="col">Feature</th><th scope="col">Bite reaction</th><th scope="col">Cellulitis (true infection)</th></tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td data-label="Feature">When it starts</td>
+             <td data-label="Bite reaction">Minutes to hours after a known bite</td>
+             <td data-label="Cellulitis (true infection)">Often no clear trigger; builds up over hours to days</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">Where it appears</td>
+             <td data-label="Bite reaction">Often more than one place at once — wherever you were bitten, sometimes both legs. Each area of redness is centred on its own bite mark</td>
+             <td data-label="Cellulitis (true infection)">Almost always one area, on one side</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">How it changes</td>
+             <td data-label="Bite reaction">Peaks early, then plateaus or fades</td>
+             <td data-label="Cellulitis (true infection)">Keeps spreading day by day if untreated</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">What it feels like</td>
+             <td data-label="Bite reaction">Itch usually stronger than pain</td>
+             <td data-label="Cellulitis (true infection)">Pain and tenderness usually stronger than itch</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">Feeling unwell</td>
+             <td data-label="Bite reaction">Rare; a mosquito bite with fever is a recognised harmless pattern called "skeeter syndrome"</td>
+             <td data-label="Cellulitis (true infection)">Fever and feeling generally unwell become more likely as it worsens</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">The skin itself</td>
+             <td data-label="Bite reaction">Often intact, sometimes with a small central mark from the bite</td>
+             <td data-label="Cellulitis (true infection)">May or may not have a visible break in the skin</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">Response to antihistamine/steroid cream</td>
+             <td data-label="Bite reaction">Usually settles within a day or two</td>
+             <td data-label="Cellulitis (true infection)">No real improvement</td>
+           </tr>
+           <tr>
+             <td data-label="Feature">Response to antibiotics</td>
+             <td data-label="Bite reaction">No real change, because there was nothing to treat</td>
+             <td data-label="Cellulitis (true infection)">Should visibly improve within 2 to 3 days</td>
+           </tr>
+         </tbody>
+       </table>
+       <p>No single feature proves it either way — but several of these pointing the same direction (for example: both legs affected, itch more than pain, no fever, and it's already calming down after two days) makes a bacterial infection much less likely.</p>
+       <p class="note"><strong>The hardest window is the first day or two,</strong> when a large reaction is still getting worse — so "spreading day by day" does not yet separate the two. In that early stage, these still hold: more than one spot, or redness symmetric on both legs, favours a reaction; a single area that is painful more than itchy, with fever or feeling unwell, favours infection.</p>
+     </section>
+
+     <section>
+       <h2>What they typically look like</h2>
+       <div class="appearances">
+         <div class="appear-card">
+           <p class="appear-title">Typical bite reaction</p>
+           <svg role="img" aria-label="Schematic of a typical large insect bite reaction: several small red bite marks, each ringed by a soft area of redness, often in more than one place at once." viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg">
+             <rect x="0" y="0" width="260" height="190" rx="8" fill="#f6e2d6"></rect>
+             <ellipse cx="78" cy="66" rx="30" ry="15" fill="#f0a8a8" opacity="0.6"></ellipse>
+             <circle cx="78" cy="66" r="3.2" fill="#8f2f2f"></circle>
+             <ellipse cx="66" cy="120" rx="24" ry="13" fill="#f0a8a8" opacity="0.5"></ellipse>
+             <circle cx="66" cy="120" r="3.2" fill="#8f2f2f"></circle>
+             <ellipse cx="186" cy="82" rx="28" ry="14" fill="#f0a8a8" opacity="0.6"></ellipse>
+             <circle cx="186" cy="82" r="3.2" fill="#8f2f2f"></circle>
+             <text x="130" y="176" font-size="11" font-family="Arial, sans-serif" fill="#7a1f1f" text-anchor="middle">several spots at once, each centred on its own bite</text>
+           </svg>
+           <p class="appear-caption">Several small red spots, each ringed by soft redness — often on both legs or in several places at once. Itchy more than painful, usually no fever.</p>
+         </div>
+         <div class="appear-card">
+           <p class="appear-title">Cellulitis (true infection)</p>
+           <svg role="img" aria-label="Schematic of cellulitis: one large, soft-edged area of red, hot and painful skin, with a red streak running up it and a fever indicator." viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg">
+             <defs>
+               <radialGradient id="diffuse" cx="46%" cy="52%" r="60%">
+                 <stop offset="0%" stop-color="#e03a3a"></stop>
+                 <stop offset="55%" stop-color="#ea6b6b"></stop>
+                 <stop offset="100%" stop-color="#f3b3b3" stop-opacity="0.12"></stop>
+               </radialGradient>
+             </defs>
+             <rect x="0" y="0" width="260" height="190" rx="8" fill="#f6e2d6"></rect>
+             <ellipse cx="118" cy="104" rx="88" ry="52" fill="url(#diffuse)"></ellipse>
+             <line x1="126" y1="104" x2="176" y2="30" stroke="#b21e1e" stroke-width="2.6" stroke-linecap="round"></line>
+             <text x="182" y="34" font-size="9" font-family="Arial, sans-serif" fill="#b21e1e">red streak</text>
+             <g transform="translate(214,32)">
+               <rect x="-3" y="-18" width="6" height="26" rx="3" fill="#ffffff" stroke="#b21e1e" stroke-width="1.4"></rect>
+               <circle cx="0" cy="10" r="5.5" fill="#b21e1e"></circle>
+               <rect x="-1.2" y="-13" width="2.4" height="19" fill="#b21e1e"></rect>
+               <text x="11" y="4" font-size="8.5" font-family="Arial, sans-serif" fill="#b21e1e">&#8593; fever</text>
+             </g>
+             <text x="130" y="180" font-size="11" font-family="Arial, sans-serif" fill="#7a1f1f" text-anchor="middle">one area, soft-edged, hot and painful — spreading</text>
+           </svg>
+           <p class="appear-caption">One large, soft-edged patch — hot, painful, and spreading. A red streak (lymphangitis) and fever / feeling unwell point to a genuine infection.</p>
+         </div>
+       </div>
+       <p class="photolinks">Want to see real photographs? NHS and NICE publish clinical images — <a href="https://www.nhs.uk/conditions/cellulitis/" target="_blank" rel="noopener noreferrer">NHS: Cellulitis</a> and <a href="https://www.nice.org.uk/guidance/ng182" target="_blank" rel="noopener noreferrer">NICE NG182: Cellulitis and erysipelas</a> (these open in your browser and need an internet connection; the diagrams above work offline).</p>
+     </section>
+
+     <section>
+       <h2>When to seek medical advice</h2>
+       <p>There are three genuinely different things that can go wrong after a bite or sting, on very different timescales. It helps to know which one you're actually watching for.</p>
+
+       <h3>1. Severe allergic reaction (anaphylaxis) — rare, fast, call 999</h3>
+       <p>This happens within minutes of a sting, not hours or days later, and is overwhelmingly linked to bee and wasp stings rather than mosquito or midge bites. Call 999 immediately if, shortly after being stung, someone develops difficulty breathing, swelling of the face, lips, tongue or throat, dizziness or fainting, or collapse. If they carry an adrenaline auto-injector, use it without delay. If it's been more than an hour or two since the bite or sting and none of this has happened, this particular risk has passed.</p>
+
+       <h3>2. Wound infection — uncommon, slow, GP/111 territory</h3>
+       <p>True bacterial infection develops over days, not hours, and is far less common than it's usually assumed to be. Contact NHS 111, your GP, or a pharmacist if:</p>
+       <ul>
+         <li>the redness is still visibly spreading day by day, rather than settling</li>
+         <li>you feel feverish, shivery, or generally unwell (rather than just locally sore)</li>
+         <li>there are red streaks running away from the bite</li>
+         <li>it hasn't started improving after 2 to 3 days, or it's getting worse</li>
+         <li>you have a condition that affects your immune system or circulation (for example diabetes, or you take medication that suppresses your immune system) — infection risk and severity are both higher in this group specifically</li>
+       </ul>
+
+       <h3>3. Tick bites — a different risk entirely</h3>
+       <p>Ticks are the one creature in the UK confirmed to transmit disease through the bite itself, mainly Lyme disease. Fun fact: a tick is not an insect at all — it's an arachnid, so eight legs and two body parts (a spider or mite relative, not a six-legged bug). This isn't a wound infection and doesn't follow the same pattern — watch instead for an expanding circular or oval rash (classically, but not always, with a paler centre) appearing days to weeks after a tick bite, or flu-like symptoms in the weeks that follow. If either occurs, contact your GP and mention the tick bite. Removing an attached tick promptly, with fine-tipped tweezers, close to the skin, reduces the risk of transmission.</p>
+       <p class="photolinks">Want more on ticks? NHS: <a href="https://www.nhs.uk/conditions/lyme-disease/" target="_blank" rel="noopener noreferrer">Tick bites / Lyme disease</a> (opens in your browser; needs an internet connection).</p>
+     </section>
+
+     <section>
+       <h2>What the evidence actually shows</h2>
+       <p>Want to dig deeper? Evidence on bite infection and treatment in the UK.</p>
+       <p>A lot of people get treated with antibiotics for bites that are "possibly" infected — but is that really needed, and does it even work the way we assume? A 2023 study across 10 English and Welsh GP practices found that about 70% of people presenting with an insect bite were prescribed an antibiotic (usually flucloxacillin), yet only 2% needed hospital referral, and the researchers concluded that antibiotics are likely being overused for bites. In the very large majority of cases, a bite is not infected — so the antibiotic is being given for something that wasn't there. There's a further twist worth a comment: we now know that antibiotics often relieve the redness and heat through a non-specific anti-inflammatory effect, so they may well add to a bit of improvement that would have happened with time anyway. Even a course that "seems to have worked" therefore doesn't prove there was a bacterial infection to begin with — much of that benefit can be natural healing, the anti-inflammatory effect, or both.</p>
+       <p>A related analysis estimated that English general practice sees around 1.5 million insect bite consultations a year, with roughly one in five patients needing a second antibiotic course within four weeks — which suggests the first course often wasn't treating a genuine infection in the first place.</p>
+       <p>It's also worth knowing that even when a bite genuinely is infected, a swab of the surface skin usually won't identify the bacteria responsible — it tends to pick up whatever is sitting on the skin surface rather than what's driving the infection underneath. Swabs are only useful where there's an open wound, pus, or blister fluid to sample directly. This is why most infected bites and cellulitis are treated on clinical judgement and appearance alone, without a specific antibiotic being matched to a specific bacterium.</p>
+       <p>Severe, life-threatening outcomes from bites and stings are dominated by allergic reaction, not infection. The UK's national fatal anaphylaxis registry recorded 92 insect-sting-related deaths out of 479 total anaphylaxis deaths between 1992 and 2008 — an average of roughly 5 to 6 deaths a year, almost all from bee or wasp venom. By contrast, reports of death or serious harm from a bite becoming infected are limited to isolated case reports worldwide, almost always in people who were already seriously unwell with another condition (diabetes, liver disease, a weakened immune system) — there's no reliable UK incidence figure because the outcome is that rare.</p>
+       <p>On which UK insects actually transmit disease through the bite itself: currently, ticks are the only ones confirmed to do so. Lyme disease is the most common, with 1,000 to 1,500 laboratory-confirmed cases a year in England and Wales (UK Health Security Agency), plus tick-borne encephalitis, babesiosis and anaplasmosis, all currently rare. No UK mosquito, midge, flea, or bedbug is currently known to transmit disease to humans — UKHSA has detected fragments of West Nile and Usutu virus in UK mosquitoes but rates the risk to human health as very low, with no confirmed human cases to date.</p>
+     </section>
+
+     <section>
+       <h2>Sources</h2>
+       <ul>
+         <li>Wilcock J, Hawthorne K, Reeve J, et al. "Are insect bites responsible for the rise in summer flucloxacillin prescribing in United Kingdom general practices?" <em>Family Practice</em>, 2023. doi:10.1093/fampra/cmad051</li>
+         <li>NICE Clinical Knowledge Summaries — Insect bites and stings</li>
+         <li>NICE Guideline NG182 — Cellulitis and erysipelas: antimicrobial prescribing</li>
+         <li>RCEMLearning — Cellulitis and Other Skin Infections</li>
+         <li>NHS.uk — Insect bites and stings</li>
+         <li>Turner PJ, et al. UK national fatal anaphylaxis registry, 1992–2008 (insect-sting-related deaths)</li>
+         <li>UK Health Security Agency — Lyme disease and tick surveillance data, 2025/26</li>
+         <li>UK Health Security Agency — mosquito-borne disease risk assessment (West Nile virus, Usutu virus)</li>
+       </ul>
+       <p class="disclaimer"><em>Last reviewed: August 2026. This page is for general information and does not replace individual medical advice.</em></p>
+     </section>
+   </main>
+</body>
+</html>
